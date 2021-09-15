@@ -7,6 +7,7 @@ TagManager:
   - Fire
   - Fall
   - Kassi
+  - bullet
   layers:
   - Default
   - TransparentFX

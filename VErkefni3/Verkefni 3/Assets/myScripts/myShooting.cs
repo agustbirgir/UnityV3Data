@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class myShooting : MonoBehaviour
 {
+    //public GameObject bullet;
+    //public float speed = 100f;
+    
     public Camera playerCamera;
     public GameObject bulletPrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -20,6 +19,21 @@ public class myShooting : MonoBehaviour
             GameObject bulletObject = Instantiate(bulletPrefab);
             bulletObject.transform.position = playerCamera.transform.position + playerCamera.transform.forward;
             bulletObject.transform.forward = playerCamera.transform.forward;
+
         }
     }
 }
+
+/*
+            Debug.Log("skjOtttttttta");
+
+            //GameObject instBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
+            GameObject instBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;//   Quaternion.identity;
+            Rigidbody instBulletRigidbody = instBullet.GetComponent<Rigidbody>();
+            instBulletRigidbody.AddForce(transform.forward * speed);
+            Destroy(instBullet, 1f);//kúl eytt eftir 0.5sek
+            */
+
+/*
+            
+            */

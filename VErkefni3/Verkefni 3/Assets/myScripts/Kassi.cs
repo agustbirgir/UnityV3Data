@@ -25,12 +25,13 @@ public class Kassi : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "kula2")
+        if (collision.collider.tag == "bullet")
         {
             Debug.Log("varð fyrir kúlu2");
             count = count + 1;//færð stig
             SetCountText();//kallar í aðferðina
             Sprengin();
+            Destroy(gameObject);
         }
     }
     void SetCountText()//hér er aðferðin
