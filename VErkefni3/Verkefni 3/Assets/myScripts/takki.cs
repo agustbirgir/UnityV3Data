@@ -4,9 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class takki : MonoBehaviour
 {
+    private void Update()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
     public void Byrja()
     {
         SceneManager.LoadScene(1);
+    }
+    public void Endir()
+    {
+        SceneManager.LoadScene(0);
+
     }
 
 }

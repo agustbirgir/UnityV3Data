@@ -410,7 +410,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 950354468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e6c91e0e3a1564e8ad80f6165e2f7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f544884f226803479307bb7ffcdd3c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &950354470
@@ -828,8 +828,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 950354469}
-        m_TargetAssemblyTypeName: endTakki, Assembly-CSharp
-        m_MethodName: Byrja
+        m_TargetAssemblyTypeName: takki, Assembly-CSharp
+        m_MethodName: Endir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
