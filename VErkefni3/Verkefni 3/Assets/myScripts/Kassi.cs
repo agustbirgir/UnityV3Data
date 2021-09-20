@@ -23,36 +23,34 @@ public class Kassi : MonoBehaviour
             Destroy(gameObject);
             gameObject.SetActive(false);
         }
-
+        // ef playerinn fær 9 stig þa mun hann fara i scenu 3
         if (count == 9)
         {
             Debug.Log("Victory");
             SceneManager.LoadScene(3);
         }
-
+        // ef count fer niður á 0 þa mun hann fara inná scenu 2
         if (count == 0)
         {
             SceneManager.LoadScene(2);
         }
     }
     private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "bullet")
+    {   
+        if (collision.collider.tag == "bullet")// tag kallar á bullet tag sem er inna unity
         {
             Debug.Log("varð fyrir kúlu");
             count = count + 1;//færð stig
             SetCountText();//kallar í aðferðina
-            Sprengin();
-            Destroy(gameObject);
+            Sprengin();// kallar á sprenging aðferpina
+            Destroy(gameObject);//siðan eyðileggur bullet objectið
         }
 
-        if (collision.collider.tag == "Player")
+        if (collision.collider.tag == "Player")// ef player snertir enemy þa mun hann fa minus stig
         {
             count -= 1;
             SetCountText();      
         }
-
-        
 
     }
 
