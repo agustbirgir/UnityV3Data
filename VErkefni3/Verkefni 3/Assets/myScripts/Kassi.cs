@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Kassi : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Kassi : MonoBehaviour
     {
         countText = FindObjectOfType<Text>();
        //sprenging= GetComponent<Explosion>
-        count = 0;
+        count = 1;
         SetCountText();
     }
     private void Update()
@@ -22,12 +23,23 @@ public class Kassi : MonoBehaviour
             Destroy(gameObject);
             gameObject.SetActive(false);
         }
+
+        if (count == 9)
+        {
+            Debug.Log("Victory");
+            SceneManager.LoadScene(3);
+        }
+
+        if (count == 0)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "bullet")
         {
-            Debug.Log("varð fyrir kúlu2");
+            Debug.Log("varð fyrir kúlu");
             count = count + 1;//færð stig
             SetCountText();//kallar í aðferðina
             Sprengin();
@@ -36,11 +48,14 @@ public class Kassi : MonoBehaviour
 
         if (collision.collider.tag == "Player")
         {
-            Debug.Log("Touch Player");
-            count -= count;
-            SetCountText();
+            count -= 1;
+            SetCountText();      
         }
+
+        
+
     }
+
     void SetCountText()//hér er aðferðin
     {
         countText.text = "Stig: " + count.ToString();
@@ -50,3 +65,9 @@ public class Kassi : MonoBehaviour
         Instantiate(sprenging, transform.position, transform.rotation);
     }
 }
+
+/*
+ Debug.Log("Touch Coin");
+            count += 2;
+            SetCountText();
+*/

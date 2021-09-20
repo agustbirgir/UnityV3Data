@@ -9,6 +9,7 @@ TagManager:
   - Kassi
   - bullet
   - Enemy
+  - Collide
   layers:
   - Default
   - TransparentFX
