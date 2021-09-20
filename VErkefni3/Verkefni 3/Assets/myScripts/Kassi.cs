@@ -33,6 +33,13 @@ public class Kassi : MonoBehaviour
             Sprengin();
             Destroy(gameObject);
         }
+
+        if (collision.collider.tag == "Player")
+        {
+            Debug.Log("Touch Player");
+            count -= count;
+            SetCountText();
+        }
     }
     void SetCountText()//hér er aðferðin
     {

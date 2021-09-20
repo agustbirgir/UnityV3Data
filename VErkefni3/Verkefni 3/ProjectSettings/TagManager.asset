@@ -8,6 +8,7 @@ TagManager:
   - Fall
   - Kassi
   - bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

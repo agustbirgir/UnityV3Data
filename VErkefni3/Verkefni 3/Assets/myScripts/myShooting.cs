@@ -7,7 +7,7 @@ public class myShooting : MonoBehaviour
     //public GameObject bullet;
     //public float speed = 100f;
     
-    public Camera playerCamera;
+    public GameObject playerCamera;
     public GameObject bulletPrefab;
 
 
@@ -23,17 +23,3 @@ public class myShooting : MonoBehaviour
         }
     }
 }
-
-/*
-            Debug.Log("skjOtttttttta");
-
-            //GameObject instBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
-            GameObject instBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;//   Quaternion.identity;
-            Rigidbody instBulletRigidbody = instBullet.GetComponent<Rigidbody>();
-            instBulletRigidbody.AddForce(transform.forward * speed);
-            Destroy(instBullet, 1f);//kúl eytt eftir 0.5sek
-            */
-
-/*
-            
-            */

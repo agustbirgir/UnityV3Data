@@ -29,5 +29,14 @@ public class Ovinur : MonoBehaviour
     {
         rb.MovePosition(transform.position + (stefna * hradi * Time.deltaTime));
     }
-        
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            Debug.Log("Touch Player");
+        }
+    }
+
+
 }
